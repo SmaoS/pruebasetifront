@@ -1,0 +1,20 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Detector de Mutantes</title>
+</head>
+<body>
+
+    <table>
+        <tr *ngFor="let row of dnaInput; let i = index">
+          <td *ngFor="let cell of row; let j = index">
+            <input [(ngModel)]="dnaInput[i][j]" maxlength="1" size="1">
+          </td>
+        </tr>
+      </table>    
+      <button (click)="checkMutant()">Verificar</button>
+      <p>{{ resultMessage }}</p>
+</body>
+</html>
